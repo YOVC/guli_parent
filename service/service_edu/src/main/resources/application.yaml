@@ -1,27 +1,26 @@
-#\u670D\u52A1\u7AEF\u53E3
+#端口号设置
 server:
   port: 8001
 
-#\u670D\u52A1\u540D \u5728springCloud\u4E2D\u4F7F\u7528
+#服务名称，用于springCloud
 spring:
   application:
     name: service-edu
-#\u73AF\u5883\u6D4B\u8BD5\uFF1Adev,test,prod
   profiles:
     active: dev
-#mysql\u6570\u636E\u5E93\u8FDE\u63A5
+#mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8
     username: root
     password: 123456
-
+#Date类型返回json数据的格式
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
-#mybatis\u65E5\u5FD7
+#mybatis
 mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:/mapper/*.xml

@@ -26,6 +26,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/edu/teacher")
+@CrossOrigin
 public class TeacherController {
 
     @Autowired
@@ -108,11 +109,11 @@ public class TeacherController {
     //根据id查询讲师
     @GetMapping("selectTeacher/{id}")
     public R selectById(@PathVariable(value = "id") String id){
-        try{
-            int i=10/0;
-        }catch (Exception e){
-            throw new GuliException(20001,"执行了自定义异常处理");
-        }
+//        try{
+//            int i=10/0;
+//        }catch (Exception e){
+//            throw new GuliException(20001,"执行了自定义异常处理");
+//        }
         Teacher teacher = teacherService.getById(id);
         return R.ok().data("teacher",teacher);
     }

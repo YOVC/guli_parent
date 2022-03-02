@@ -4,7 +4,7 @@ import cn.jr.R;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/edu/user")
+@RequestMapping("/eduservice/user")
 @CrossOrigin    //解决跨域问题
 public class LoginController {
 

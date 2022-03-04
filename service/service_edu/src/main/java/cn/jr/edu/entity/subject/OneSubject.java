@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * @author JR
+ */
 @Data
 public class OneSubject {
 
